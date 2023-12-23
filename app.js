@@ -11,6 +11,7 @@ Form.addEventListener('submit', (e) => {
     Responses = []
     Note = null
     const QTotal = document.querySelectorAll("input[type='radio']")
+    resetColor(QTotal);
 getChecked(QTotal);
     note(Responses, responses);
 
@@ -73,4 +74,15 @@ wrongAnswer.style.backgroundColor = 'rgba(150, 0, 0, 0.3)'
         goodAnswer.style.backgroundColor = 'rgba(0, 150, 0, 0.3)'
     }
 }
+}
+
+const resetColor = (e) => {
+    e.forEach((radiobutton) => {
+        radiobutton.addEventListener("click", () => {
+            let Ref = radiobutton.name;
+            let QuestionToReset = document.getElementById(Ref);
+
+            QuestionToReset.style.backgroundColor = "#f1f1f1"
+        })
+    })
 }
