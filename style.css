@@ -122,3 +122,29 @@ button {
   margin-top: 30px;
   margin-bottom: 50px;
 text-align: center;}
+
+
+@media (max-width: 768px) {
+  .question  {
+    width: 90%;
+  }
+
+  .valider {
+    width: 50%;
+  }
+  .consignes {
+    width: 90%;
+  }
+}
+
+@media (max-width: 620px) {
+  .title {
+    flex-direction: column;
+  }
+  h1 {
+    text-align: center;
+  }
+  .question {
+    padding: 20px 10px 20px 20px;
+  }
+}

@@ -1,6 +1,6 @@
-const responses = ["c", "a", "b", "a", "c"];
-const emojis = ["✔️", "✨", "👀", "😭", "👎"];
-const comment = ["Bravo", "Presque", "Moyen", "Oula ce n'est pas bon", "Catastrophique"];
+const responses = ["c", "a", "b", "a", "c", "a", "c", "b" , "a"];
+const emojis = ["👎", "😭" , "👀", "✨", "✔️" ];
+const comment = ["Catastrophique!", "Oula ce n'est pas bon", "Moyen", "Presque!", "Vous êtes excellent!"];
 
 const Form = document.getElementById('form');
 let Responses = [];
@@ -10,21 +10,11 @@ Form.addEventListener('submit', (e) => {
     e.preventDefault();
     Responses = []
     Note = null
-    const Q1 = document.getElementsByName('q1')
-    const Q2 = document.getElementsByName('q2')
-    const Q3 = document.getElementsByName('q3')
-    const Q4 = document.getElementsByName('q4')
-    const Q5 = document.getElementsByName('q5')
-
-    getChecked(Q1);
-    getChecked(Q2);
-    getChecked(Q3);
-    getChecked(Q4);
-    getChecked(Q5);
-
+    const QTotal = document.querySelectorAll("input[type='radio']")
+getChecked(QTotal);
     note(Responses, responses);
 
-    showResults(Note);
+    showResults(Note, Responses);
     error(Responses);
 
 })
@@ -46,10 +36,28 @@ if(e[i] === f[i]) {
     }
 }
 
-const showResults = (e) => {
+const showResults = (e, f) => {
     const consignes = document.getElementById('consignes');
-    let noteIndex = 5 - e;
-consignes.textContent = comment[noteIndex] +  ' ' + ' ' + emojis[noteIndex]
+    let noteForIndex = (e/f.length*5);
+    let noteIndex = null;
+switch(true) {
+    case(noteForIndex <= 1):
+noteIndex = 0;
+break;
+case (noteForIndex <= 2):
+    noteIndex = 1;
+    break;
+case (noteForIndex <= 4):
+    noteIndex = 2;
+    break;
+case (noteForIndex < 5):
+    noteIndex = 3;
+    break;
+case (noteForIndex === 5):
+    noteIndex = 4;
+    break;
+}
+consignes.textContent =  (e) + '/' + f.length + ' ' + comment[noteIndex] +  ' ' + ' ' + emojis[noteIndex]
 }
 
 const error = (e) => {
