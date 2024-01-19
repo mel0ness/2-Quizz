@@ -6,6 +6,9 @@
         "rep1": "Clovis",
         "rep2": "Abraham Lincoln",
         "rep3": "Napoleon Bonaparte",
+        "lab1": "11",
+        "lab2": "12",
+        "lab3": "13",
         "correct": "c"
     },
     {
@@ -14,6 +17,9 @@
         "rep1": "4 Juillet 1776",
         "rep2": "18 Avril 1856",
         "rep3": "30 Juin 1925",
+        "lab1": "21",
+        "lab2": "22",
+        "lab3": "23",
         "correct": "a"
     },
     {
@@ -22,6 +28,9 @@
         "rep1": "15 ap. J.-C.",
         "rep2": "476 ap. J.-C.",
         "rep3": "-740 av. J.-C.",
+        "lab1": "31",
+        "lab2": "32",
+        "lab3": "33",
         "correct": "b"
     },
     {
@@ -30,6 +39,9 @@
         "rep1": "Ljubljana",
         "rep2": "Belgrade",
         "rep3": "Bratislava",
+        "lab1": "41",
+        "lab2": "42",
+        "lab3": "43",
         "correct": "a"
     },
     {
@@ -38,6 +50,9 @@
         "rep1": "1,365 Million",
         "rep2": "21 Millions",
         "rep3": "4,9 Millions",
+        "lab1": "51",
+        "lab2": "52",
+        "lab3": "53",
         "correct": "c"
     },
     {
@@ -46,6 +61,9 @@
         "rep1": "13 Novembre 1987",
         "rep2": "13 Décembre 1987",
         "rep3": "13 Mai 1986",
+        "lab1": "61",
+        "lab2": "62",
+        "lab3": "63",
         "correct": "a"
     },
     {
@@ -54,6 +72,9 @@
         "rep1": "Les brocolis",
         "rep2": "Le sorbet à la fraise",
         "rep3": "La pizza 4 fromages",
+        "lab1": "71",
+        "lab2": "72",
+        "lab3": "73",
         "correct": "c"
     },
     {
@@ -62,6 +83,9 @@
         "rep1": "Ploum Ploum",
         "rep2": "Rouquemoutte",
         "rep3": "Steffie",
+        "lab1": "81",
+        "lab2": "82",
+        "lab3": "83",
         "correct": "b"
     },
     {
@@ -70,6 +94,9 @@
         "rep1": "Etre Riche",
         "rep2": "Etre heureux",
         "rep3": "Etre Steve Jobs",
+        "lab1": "91",
+        "lab2": "92",
+        "lab3": "93",
         "correct": "b"
     },
     {
@@ -78,6 +105,9 @@
         "rep1": "Oui",
         "rep2": "Non",
         "rep3": "Aucune idée",
+        "lab1": "101",
+        "lab2": "102",
+        "lab3": "103",
         "correct": "a"
     }
 ]

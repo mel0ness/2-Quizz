@@ -1,20 +1,51 @@
-const responses = ["c", "a", "b", "a", "c", "a", "c", "b" , "a"];
+let responses = [];
 const emojis = ["👎", "😭" , "👀", "✨", "✔️" ];
 const comment = ["Catastrophique!", "Oula ce n'est pas bon", "Moyen", "Presque!", "Vous êtes excellent!"];
-
+const questionsPlace = document.getElementById("questionsPlace");
 
 async function GetResults() {
     try {
-const response = await fetch("./Question.json");
+const response = await fetch("https://mel0ness.github.io/2-Quizz/Question.json");
 const Results = await response.json();
 console.log(Results);
+CreateArray(Results);
+CreateQuestions(Results);
     }
     catch (error) {
 const Results = error;
+console.log(Results);
     }
     }
 
 GetResults();    
+
+const CreateQuestions = (e) => {
+    for(let i=0; i < e.length; i++) {
+        CreateElement(e[i])
+
+    }
+}
+
+const CreateElement = (e) => {
+    const Question = document.createElement("div");
+    Question.innerHTML = `<div class="question" id="q${e.id}">
+    <h2>${e.title}</h2>
+    <div class="input"><input type="radio" id=${e.lab1} name="q${e.id}" value="a" checked>
+      <label for=${e.lab1}>${e.rep1}</label>
+    </div>
+    <div class="input"><input type="radio" id=${e.lab2} name="q${e.id}" value="b"> <label for=${e.lab2}>${e.rep2}</label></div>
+    <div class="input"><input type="radio" id=${e.lab3} name="q${e.id}" value="c"><label for=${e.lab3}>${e.rep3}</label></div>
+  </div>`;
+  questionsPlace.appendChild(Question);
+}
+
+const CreateArray = (e) => {
+
+for(let i=0; i < e.length; i++) {
+responses.push(e[i].correct);
+Responses.push("a");
+}
+}
 
 const Form = document.getElementById('form');
 let Responses = [];
