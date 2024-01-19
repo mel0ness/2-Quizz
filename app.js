@@ -2,6 +2,20 @@ const responses = ["c", "a", "b", "a", "c", "a", "c", "b" , "a"];
 const emojis = ["👎", "😭" , "👀", "✨", "✔️" ];
 const comment = ["Catastrophique!", "Oula ce n'est pas bon", "Moyen", "Presque!", "Vous êtes excellent!"];
 
+
+async function GetResults() {
+    try {
+const response = await fetch("./Question.json");
+const Results = await response.json();
+console.log(Results);
+    }
+    catch (error) {
+const Results = error;
+    }
+    }
+
+GetResults();    
+
 const Form = document.getElementById('form');
 let Responses = [];
 let Note = null;
